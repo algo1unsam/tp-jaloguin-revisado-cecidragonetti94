@@ -6,14 +6,15 @@ object trajeDeBruja {
 
 object barba {
 	var longitudDeBarba = 2
+	
 	method nivelSusto(){
 		return longitudDeBarba * 5
 	}
 }
 
 object mascaraDracula {
-	var tamanio = 2
-	method nivelSusto(promesas){
+	const tamanio = 2
+	method nivelSusto(){
 		return 2 * tamanio
 	}
 
@@ -21,17 +22,22 @@ object mascaraDracula {
 }
 
 object mascaraFrankenstein {
-	var tamanio = 2
-		method nivelSusto(promesas){
-		return 22 * tamanio
+	method nivelSusto(){
+		return 22 
 	}
 	
 }
 
 object mascaraPolitico {
-	var tamanio = 2
-		method nivelSusto(promesas){
-		return promesas * tamanio
+	const tamanio = 2
+
+		method nivelSusto(){
+		return politico.promesas() * tamanio
 	}
 	}
+object politico {
+	method promesas() {
+		return 10
+	}
+}
 
