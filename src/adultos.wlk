@@ -12,9 +12,7 @@ object mirca {
 		chicos.recibirCaramelos(self.caramelosAEntregar(chicos))
 		tolerancia = tolerancia - 1
 	}
-	method caramelosAEntregar(chicos) {
-		return (chicos.capacidadSusto() - tolerancia).max(0)
-	}
+	method caramelosAEntregar(chicos) = (chicos.capacidadSusto() - tolerancia).max(0)
 	
 
 }

@@ -5,9 +5,8 @@ object macaria {
 	var disfraces = []
 	var caramelos = 0
 
-	method capacidadSusto(){
-		 return nivelIra + disfraces.sum({disfraz => disfraz.nivelSusto()})
-	}
+	method capacidadSusto() =nivelIra + disfraces.sum({disfraz => disfraz.nivelSusto()})
+	
 	method disfrazar(disfraz){
 		disfraces.add(disfraz)
 	}
@@ -17,18 +16,15 @@ object macaria {
 	method recibirCaramelos(caramelo){
 		caramelos += caramelo - caramelo.div(4)
 	}
-	method caramelos(){
-		return caramelos
-	}
-	method elementoMenosEfectivo() {
-		return disfraces.min({ disfraz => disfraz.nivelSusto() })
-	}
+	method caramelos()= caramelos
+	
+	method elementoMenosEfectivo() =  disfraces.min({ disfraz => disfraz.nivelSusto() })
+
 	method dejarDeUsarMenosEfectivo(){
 		self.quitarDisfraz(self.elementoMenosEfectivo())
 	}
-		method disfraces() {
-		return disfraces
-	}
+		method disfraces() = disfraces
+	
 }
 
 object pancracio {
@@ -43,18 +39,15 @@ object pancracio {
 	method quitarDisfraz(disfraz){
 		grito += 'uu'
 	}
-		method capacidadSusto(){
-		 return grito.size() - 1 + unicoDisfraz.nivelSusto()
-	}
+		method capacidadSusto()= grito.size() - 1 + unicoDisfraz.nivelSusto()
+	
 	method recibirCaramelos(caramelo){
 		caramelos += caramelo
 	}
-	method caramelos() {
-		return caramelos
-	}
-	method disfraces() {
-		return [unicoDisfraz]
-	}
+	method caramelos() = caramelos
+
+	method disfraces() = [unicoDisfraz]
+	
 }
 
 // El chico inventado .
@@ -67,16 +60,14 @@ object pedro {
 	method quitarDisfraz(disfraz){
 		disfraces.remove(disfraz)
 	}
-	method capacidadSusto(){
-		return disfraces.count({ disfraz => disfraz.nivelSusto()>20 })
-	}
+	method capacidadSusto() = disfraces.count({ disfraz => disfraz.nivelSusto()>20 })
+	
 	method recibirCaramelos(caramelo){}
-		method caramelos() {
-		return 0
-	}
-	method disfraces() {
-		return disfraces 
-	}
+	
+		method caramelos() = 0
+	
+	method disfraces() = disfraces 
+	
 	
 	method tirarTodosLosDisfraces(){
 		disfraces.clear()
