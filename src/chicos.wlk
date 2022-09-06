@@ -61,7 +61,7 @@ object pancracio {
 
 object pedro {
 	var disfraces = [ ]
-method disfrazar(disfraz){
+	method disfrazar(disfraz){
 		disfraces.add(disfraz)
 	}
 	method quitarDisfraz(disfraz){
@@ -70,7 +70,7 @@ method disfrazar(disfraz){
 	method capacidadSusto(){
 		return disfraces.count({ disfraz => disfraz.nivelSusto()>20 })
 	}
-	method recibirCaramelos(){}
+	method recibirCaramelos(caramelo){}
 		method caramelos() {
 		return 0
 	}

@@ -8,13 +8,13 @@ object mirca {
 	method tolerancia(){
 		return tolerancia
 	}
-	method seAsusta(chico){
-		chico.recibirCaramelos(self.daCaramelos(chico))
-			tolerancia = tolerancia - 1
+	method serAsustadoPor(chicos) {
+		chicos.recibirCaramelos(self.caramelosAEntregar(chicos))
+		tolerancia = tolerancia - 1
 	}
-	method daCaramelos(){
-		
-		
+	method caramelosAEntregar(chicos) {
+		return (chicos.capacidadSusto() - tolerancia).max(0)
 	}
+	
 
 }
