@@ -29,7 +29,7 @@ object macaria {
 
 object pancracio {
 
-	var grito = 'buuuu'
+	var grito = 4
 	var unicoDisfraz = mascaraDracula
 	var caramelos = 0
 
@@ -37,9 +37,9 @@ object pancracio {
 	unicoDisfraz = disfraz
 	}
 	method quitarDisfraz(disfraz){
-		grito += 'uu'
+		grito += 2
 	}
-		method capacidadSusto()= grito.size() - 1 + unicoDisfraz.nivelSusto()
+		method capacidadSusto()= grito.size()  + unicoDisfraz.nivelSusto()
 	
 	method recibirCaramelos(caramelo){
 		caramelos += caramelo
